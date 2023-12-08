@@ -1,4 +1,5 @@
 package com.example.productcatalog;
+import static android.util.Half.EPSILON;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -20,7 +21,7 @@ public class ProductTest {
     public void checkProductPrice() {
         // I am making this test to fail
         Product aProduct = new Product("1", "DELL MONITOR", 180);
-        assertEquals("Check the price of the product", "180", aProduct.getPrice());
+        assertEquals("Check the price of the product", 180, aProduct.getPrice(), EPSILON);
     }
 
 
